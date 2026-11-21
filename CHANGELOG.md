@@ -1,5 +1,25 @@
 # Changelog
 
+## 2.1.37
+
+- **End sessions when Kero quits** in Settings › General also ends this
+  machine's sessions and stops kerod when you quit, asking first while a
+  program still runs (`quit-ends-sessions = true`). Off by default.
+  Thanks @joei4cm
+- <kbd>⌘</kbd>-hovering a `file://` link to an image previews it, as a
+  plain image path does, on remote panes too. Thanks @lcolok
+- **Image Limit** in Settings › Shell bounds the memory the images a
+  pane's programs show can take, 64 MB by default
+  (`image-storage-limit`, `0` for no limit). Before, each pane could take
+  up to 640 MB for them. Thanks @joei4cm
+- A pane whose program exited and closed no longer leaves the keyboard
+  nowhere: the pane that takes its place gets it. Thanks @joei4cm
+- The app no longer keeps a focused pane's whole scrollback in memory to
+  show its screen to screen readers, and typing and mouse reports
+  allocate less in the app and in kerod. Thanks @joei4cm
+- Settings › Colors names the folder your own Ghostty themes go in, which
+  on Windows is `%LOCALAPPDATA%\ghostty\themes`. Thanks @joei4cm
+
 ## 2.1.36
 
 - **New sessions start in** in Settings › General takes a folder of your
